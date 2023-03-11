@@ -1,9 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Open+Sans&display=swap');
 
+@font-face {
+  font-family: Komoda;
+  src: url(../fonts/Komoda.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 img {
   width: 400px;
   height: 250px;
 }
+
+:root {
+  --color-yellow: #EAC04E;
+  --color-purple-hard: #160C28;
+  --color-purple-low: #473D5A;
+  --color-white: #fff;
+  --transition: .5s;
+  --gradient-start: rgba(4, 9, 30, .3);
+  --gradient-end: rgba(4, 9, 30, .9);
+}
+
+/* inicio do header */
+.header {
+  width: 100%;
+  height: 80px;
+  background-image: linear-gradient(to right, var(--color-purple-hard), var(--color-purple-low));
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+
+}
+
+.logo-background {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.image-logo img {
+  height: 70px;
+  width: auto;
+}
+
+.header-menu ul {
+  display: flex;
+  list-style: none;
+  background-color: var(--color-purple-low);
+  border-radius: 10px;
+  height: 50px;
+  align-items: center;
+}
+
+.header h2 {
+  color: var(--color-white);
+  font-size: 30px;
+}
+
+.header-menu li {
+  margin: 0 20px;
+
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: var(--color-yellow);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.header-menu a:hover {
+  color: var(--color-white);
+  transition: var(--transition);
+  font-size: larger;
+  text-decoration: underline;
+}
+
+.header-span {
+  background-color: var(--color-yellow);
+  padding: 10px 3px 10px 3px;
+  border-radius: 5px;
+}
+
+
+/* final do header */
+
+/* hero */
+.hero {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  background-image: linear-gradient(var(--gradient-start), var(--gradient-end)),
+    url(../images/saopaulo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* border: 1px solid black; */
+  width: 90%;
+  height: 300px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--color-white);
+}
+
+/* final do hero */
 
 h1 {
   font-family: "Lato", sans-serif;
@@ -12,12 +139,15 @@ h1 {
   color: rgb(27, 27, 66);
 }
 
-h2 {
+.hero h2 {
   font-family: "Lato", sans-serif;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #DC143C;
+  color: var(--color-white);
+  background-color: var(--color-purple-hard);
+  padding: 15px;
+  border-radius: 10px;
 }
 
 p {
@@ -39,6 +169,28 @@ a {
   font-weight: 900;
 }
 
-a:hover {
-  text-decoration: underline;
+/* estilo botão */
+button {
+  width: 30%;
+  height: 50px;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid var(--color-yellow);
+  background-color: var(--color-purple-low);
+  color: var(--color-yellow);
+  border-radius: 5px;
+  cursor: pointer;
 }
+
+button:hover {
+  font-size: 25px;
+  transition: var(--transition);
+  color: var(--color-yellow);
+  background-color: transparent;
+  font-weight: 900;
+  text-decoration: underline;
+  border: 2px solid var(--color-purple-low);
+}
+
+/* fim estilo botao */

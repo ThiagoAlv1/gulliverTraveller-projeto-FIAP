@@ -1,3 +1,11 @@
+:root {
+  --color-yellow: #EAC04E;
+  --color-purple-hard: #160C28;
+  --color-purple-low: #473D5A;
+  --color-white: #fff;
+  --transition: .5s;
+}
+
 table {
   margin: 10px auto;
   font-size: 18px;
@@ -7,15 +15,16 @@ table {
 
 caption {
   font-size: 30px;
-  color: rgb(42, 98, 172);
+  color: var(--color-purple-hard);
   text-align: center;
   font-weight: 900;
   margin-bottom: 10px;
 }
 
 thead tr {
-  background: rgb(42, 98, 172);
-  color: #fff;
+  background: var(--color-purple-hard);
+  color: var(--color-yellow);
+  font-size: 22px;
   text-align: left;
 }
 
@@ -34,18 +43,45 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:last-child {
-  border-bottom: 20px solid rgb(42, 98, 172);
+  border-bottom: 20px solid var(--color-purple-hard);
 }
 
 tbody tr:hover {
   font-weight: 900;
-  color: rgb(42, 98, 172);
+  color: var(--color-purple-low);
   cursor: pointer;
   background-color: #ffffff93;
 }
 
-tfoot {
+tfoot td {
   text-align: center;
   font-size: 13px;
   font-weight: 900;
+}
+
+
+
+.botoes {
+  width: 120px;
+  height: 40px;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid black;
+  background-color: var(--color-purple-low);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botoes a {
+  color: var(--color-white);
+  text-decoration: none;
+
+}
+
+.botoes a:hover {
+  color: var(--color-yellow);
+  transition: var(--transition);
+  font-weight: 600;
+
 }
