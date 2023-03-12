@@ -108,6 +108,22 @@ textarea {
   justify-content: space-between;
 }
 
+.botoes a {
+  width: 40%;
+  height: 50px;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border: 0;
+  background-color: var(--color-purple-low);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 
 .botoes input {
   width: 40%;
@@ -122,6 +138,13 @@ textarea {
   cursor: pointer;
 
 
+}
+
+.botoes a:hover {
+  font-size: 25px;
+  transition: var(--transition);
+  font-weight: 900;
+  text-decoration: underline;
 }
 
 .botoes input:hover {
